@@ -35,4 +35,12 @@ class User:
 
         User.user_list.remove(self)
 
-    
+    @classmethod
+    def find_user_by_username(cls,username):
+        '''
+        Method that takes in a service provider and returns a user that matches that service provider.
+        '''
+
+        for user in cls.user_list:
+            if user.username == username:
+                return user
