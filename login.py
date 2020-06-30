@@ -23,4 +23,23 @@ def register():
     else:
         print("Something went wrong. Please try again.")
 
+def login():
+    username = input("Enter username: ")
+    password = input("Enter password: ")
+    user = User(username, password)
+    
+    if user is not None:
+        user.login
+        cprint(f"Welcome {username}! You're now Logged In", "yellow")
+    else:
+        cprint("Invalid Username or Password.", "red")
+
+def save_user(self):
+
+    '''
+    save_user method saves user objects into user_list
+    '''
+
+    User.user_list.append(self) 
+
 displayMenu()
