@@ -65,5 +65,11 @@ class TestUser(unittest.TestCase):
         found_user = User.find_user_by_username("James")
         self.assertEqual(found_user.username, test_user.username)
 
+    def test_display_all_users(self):
+        """
+        method that returns a list of all users saved
+        """
+        self.assertEqual(User.display_user(), User.user_list)
+
 if __name__ == '__main__':
     unittest.main()
