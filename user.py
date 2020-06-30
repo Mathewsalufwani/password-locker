@@ -44,3 +44,10 @@ class User:
         for user in cls.user_list:
             if user.username == username:
                 return user
+
+    @classmethod
+    def display_user(cls):
+        """
+        method that returns the class array
+        """
+        return cls.user_list
